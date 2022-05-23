@@ -8,6 +8,6 @@ public interface GameInterface {
     String getInstructions(); // Anleitung, bzw Controls. Pro Zeile maximal 38 Zeichen, wegen Formatierung
     String getName();
     default int getScale(){return 1;}
-    int milisBetweenFrames();
+    int millisBetweenFrames();
     boolean hasEnded();
 }

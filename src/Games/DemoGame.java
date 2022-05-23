@@ -59,7 +59,7 @@ public class DemoGame implements GameInterface {
     }
 
     @Override
-    public int milisBetweenFrames() {
+    public int millisBetweenFrames() {
         return 100;
     }
 

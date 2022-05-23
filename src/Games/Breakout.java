@@ -31,7 +31,7 @@ public class Breakout implements GameInterface {
     }
 
     @Override
-    public int milisBetweenFrames() {
+    public int millisBetweenFrames() {
         return 50;
     }
 

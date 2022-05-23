@@ -5,7 +5,7 @@ import Game.GameInterface;
 
 public class Pong implements GameInterface {
     @Override
-    public int milisBetweenFrames() {
+    public int millisBetweenFrames() {
         return 0;
     }
 

@@ -78,7 +78,8 @@ public class MainApp {
                         game = new Breakout();
                         return;
                     case NativeKeyEvent.VC_3:
-                        break;
+                        game = new Snake();
+                        return;
                     case NativeKeyEvent.VC_4:
                         break;
                     default:
@@ -110,7 +111,7 @@ public class MainApp {
 
     private static void waitForNextFrame(){
         try {
-            Thread.sleep(game.milisBetweenFrames());
+            Thread.sleep(game.millisBetweenFrames());
         } catch (InterruptedException e) {}
     }
     private static void sendInputs() {
