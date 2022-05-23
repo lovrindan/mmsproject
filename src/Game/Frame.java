@@ -65,7 +65,12 @@ public class Frame {
     }
 
     private void addGameName(ColorChar[][] border) {
-        char[] gameName = parent.getName().toCharArray();
+        int score = parent.getScore();
+        char[] gameName;
+        if(score>0)
+            gameName = (parent.getName()+": " +parent.getScore()).toCharArray();
+        else
+            gameName = (parent.getName()).toCharArray();
         int startIndex = border.length/2-gameName.length/2;
         for (int i = 0; i < gameName.length; i++) {
             border[i+startIndex][0]= new ColorChar(gameName[i]);

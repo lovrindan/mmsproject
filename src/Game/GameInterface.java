@@ -10,4 +10,5 @@ public interface GameInterface {
     default int getScale(){return 1;}
     int millisBetweenFrames();
     boolean hasEnded();
+    default int getScore(){return -1;};
 }
