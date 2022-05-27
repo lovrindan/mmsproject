@@ -169,21 +169,21 @@ public class Snake implements GameInterface {
 
 
     private Sound getSound(){
-        /*if(startingSound){
+        if(startingSound){
             startingSound = false;
-            return Sound.OKAYLETSGO;
+            return Sound.LETSGO;
         }
-        if(keyPressed) {
+        /*if(keyPressed) {
             keyPressed = false;
-            return Sound.SCHREI;
-        }
+            return Sound.CLACK;
+        }*/
         if(appleConsumed){
             appleConsumed = false;
-            return Sound.ZUNGENSCHNALZER;
+            return Sound.SCHMAZER;
         }
         if(hasEnded()){
-            return Sound.GAMEOVERNOOB;
-        }*/
+            return Sound.GAMEOVER;
+        }
         return null;
     }
 

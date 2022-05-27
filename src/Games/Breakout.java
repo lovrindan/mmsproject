@@ -130,16 +130,16 @@ public class Breakout implements GameInterface {
     private void nextMicroFrame() {
         ball.Move();
         movePedal();
-        checkForCollison();
+        checkForCollision();
     }
 
-    private void checkForCollison() {
+    private void checkForCollision() {
         if(ball.boxCollide(floor)) gameFinished = true;
         ball.boxCollide(celling);
         ball.boxCollide(leftWall);
         ball.boxCollide(rightWall);
         if (ball.boxCollide(pedal)){
-            adjustBallforPedalSpeed(pedalDir);
+            adjustBallForPedalSpeed(pedalDir);
             curSound=Sound.PING;
         }
         breakableBoxes.removeIf(b -> {
@@ -151,7 +151,7 @@ public class Breakout implements GameInterface {
         });
     }
 
-    private void adjustBallforPedalSpeed(int pedaldir) {
+    private void adjustBallForPedalSpeed(int pedaldir) {
         Vector2D pedalDirVec = new Vector2D(pedaldir*0.1,0);
         Vector2D newBalldir = ball.dir.add(pedalDirVec).toLenght(ball.speed);
         ball.dir =newBalldir;

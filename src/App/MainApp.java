@@ -81,7 +81,8 @@ public class MainApp {
                         game = new Snake();
                         return;
                     case NativeKeyEvent.VC_4:
-                        break;
+                        game = new Pong();
+                        return;
                     default:
                         break;
                 }
