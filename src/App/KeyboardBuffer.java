@@ -33,7 +33,8 @@ class KeyboardBuffer implements NativeKeyListener {
         }
     }
     public synchronized void wakeUp(){
-        notify();
+    notify();
+    keyCodeBuffer.clear();
     }
 
     @Override
