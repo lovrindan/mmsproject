@@ -212,7 +212,12 @@ public class Snake implements GameInterface {
         b.append("Goal is to eat the spawning apples\n");
         b.append("Move by using the arrow-keys\n");
         b.append("Have fun and enjoy!\n");
-        return b.toString();
+        return """
+                This game is called Snake
+                Goal is to eat the spawning apples
+                Move by using the arrow-keys
+                Have fun and enjoy!
+                """
     }
     @Override
     public int getScore(){

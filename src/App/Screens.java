@@ -48,7 +48,7 @@ public class Screens {
                 ║                                        ║
                 ║                                        ║
                 ║                                        ║
-                ║            Game has Finished           ║
+                ║            Game has finished           ║
                 ║                                        ║
                 ║          *Press Enter to Start*        ║
                 ║                                        ║
