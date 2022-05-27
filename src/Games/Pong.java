@@ -89,7 +89,7 @@ public class Pong implements GameInterface {
     }
 
     public void moveBall(){
-        if(ball.nextY() < 0 || ball.nextY() >= height){
+        if(ball.nextY() < 0 || ball.nextY() > height - 0.5){
             ball.move();
             soundCode = 1;
             ball.hitBorder();
@@ -157,14 +157,17 @@ public class Pong implements GameInterface {
         switch (soundCode) {
 
             case 1:
-                Sound sound = Sound.BEAR;
-                frame = new Frame(field, sound , this);//Sound.PONG_WALL
+                frame = new Frame(field, Sound.PONGWALL, this);
+                break;//Sound.PONG_WALL
             case 2:
-                frame = new Frame(field, null , this); //Sound.PONG_SCORE
+                frame = new Frame(field, Sound.PONGSCORE, this);
+                break; //Sound.PONG_SCORE
             case 0:
-                frame = new Frame(field, null , this);//Sound.PONG_PADDLE
+                frame = new Frame(field, Sound.PONGPADDLE, this);
+                break; //Sound.PONG_PADDLE
             default:
                 frame = new Frame(field, null, this);
+                break;
         }
         soundCode = -1;
         field = new ColorChar[width][height];
