@@ -16,8 +16,8 @@ public class Screens {
                 ║                                        ║
                 ║              Lukas Nys                 ║
                 ║              Simon Öfferlbauer         ║
-                ║             Stefan TODO                ║
-                ║             Daniel TODO                ║
+                ║             Stefan Gaderer             ║
+                ║             Daniel Lovrinovic          ║
                 ╚════════════════════════════════════════╝
                 """;
     }
