@@ -45,13 +45,14 @@ public class Breakout implements GameInterface {
         return """
                 Use the Arrow keys to move the panel
                 Clear all boxes to win
-                The game ends if you the Ball touches 
+                The game ends if you the Ball touches
                 the floor
                 """;
     }
 
     @Override
     public void startGame() {
+        //Fills the first n rows with BreakableBoxes
         int nRows =3;
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < nRows; y++) {
@@ -82,7 +83,7 @@ public class Breakout implements GameInterface {
     @Override
     public Frame nextFrame() {
         determinePedalDir();
-        int nMicroFrames =10;
+        int nMicroFrames = 10;
         for (int i = 0; i <nMicroFrames ; i++) {
             nextMicroFrame();
         }
@@ -152,9 +153,11 @@ public class Breakout implements GameInterface {
     }
 
     private void adjustBallForPedalSpeed(int pedaldir) {
+        //If the pedal is moving when the ball hits it.
+        //The Ball is accelerated in that direction.
         Vector2D pedalDirVec = new Vector2D(pedaldir*0.1,0);
-        Vector2D newBalldir = ball.dir.add(pedalDirVec).toLenght(ball.speed);
-        ball.dir =newBalldir;
+        Vector2D newBallDir = ball.dir.add(pedalDirVec).toLength(ball.speed);
+        ball.dir =newBallDir;
     }
 
     private static double clamp(double val, double min, double max) {
@@ -207,6 +210,7 @@ public class Breakout implements GameInterface {
             this.width = width;
         }
     }
+
     static class Vector2D {
         public double x;
         public double y;
@@ -239,11 +243,10 @@ public class Breakout implements GameInterface {
         static public double dotProd(Vector2D a, Vector2D b){
             return a.x*b.x+a.y*b.y;
         }
-
         static public boolean isAngleAcute(Vector2D a, Vector2D b){
             return dotProd(a,b)>0;
         }
-        public Vector2D toLenght(double len){
+        public Vector2D toLength(double len){
             return normalize().scalarMult(len);
         }
         public Vector2D normalize(){

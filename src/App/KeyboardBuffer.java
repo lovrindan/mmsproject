@@ -33,14 +33,14 @@ class KeyboardBuffer implements NativeKeyListener {
         }
     }
     public synchronized void wakeUp(){
-    notify();
-    keyCodeBuffer.clear();
+        notify();
+        keyCodeBuffer.clear();
     }
 
     @Override
     public void nativeKeyPressed(NativeKeyEvent e) {
         int keyCode = e.getKeyCode();
-        if(keyCode==NativeKeyEvent.VC_ENTER ) wakeUp();
+        if(keyCode==NativeKeyEvent.VC_ENTER) wakeUp();
         keyCodeBuffer.add(keyCode);
     }
 

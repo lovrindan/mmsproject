@@ -24,8 +24,8 @@ public enum Sound {
     //TODO: Add your custom sound files here
     private final String filePath;
 
-    private Sound(String path) {
-        this.filePath = path;;
+    Sound(String path) {
+        this.filePath = path;
     }
     public File getFile(){
         return adjustForWorkingDirectory();
@@ -41,7 +41,6 @@ public enum Sound {
         }
     }
     private boolean workingDirectoryIsJarFile(){
-
         try {
             String currentPath = new File(".").getCanonicalPath();
             return (currentPath.endsWith("MultimediaProjekt_jar"));
