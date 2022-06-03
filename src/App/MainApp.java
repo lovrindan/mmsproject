@@ -17,6 +17,7 @@ public class MainApp {
     public static void main(String[] args) throws IOException {
         Console console = System.console();
         if(console == null){
+            //Starts itself in new cmd-Window
             String filename = MainApp.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6);
             Runtime.getRuntime().exec(new String[]{"cmd","/c","start","cmd","/k","java -jar \"" + filename + "\""});
         }else{

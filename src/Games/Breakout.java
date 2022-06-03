@@ -135,6 +135,7 @@ public class Breakout implements GameInterface {
     }
 
     private void checkForCollision() {
+        //Detects Collisions, see Documentation
         if(ball.boxCollide(floor)) gameFinished = true;
         ball.boxCollide(celling);
         ball.boxCollide(leftWall);

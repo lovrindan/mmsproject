@@ -44,9 +44,7 @@ class KeyboardBuffer implements NativeKeyListener {
         keyCodeBuffer.add(keyCode);
     }
 
-    @Override
-    public void nativeKeyTyped(NativeKeyEvent nke) {
-    }
+
 
     @Override
     public void nativeKeyReleased(NativeKeyEvent nke) {
