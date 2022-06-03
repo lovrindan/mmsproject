@@ -153,6 +153,12 @@ public class Pong implements GameInterface {
             field[5][pongBPos + i] = new ColorChar('|', null);
 
         }
+        try {
+            Thread.sleep(70);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
         field[(int) ball.px][(int) ball.py] = new ColorChar('*', null);
 
         Frame frame = new Frame(field, getSound(), this);
