@@ -1,0 +1,4 @@
+Unsere Implmentierung, unser Abschlussbericht und die Präsentation wurden auf github hochgeladen.
+Zum asuführen das jar file unter out/artifacts öffnen.
+
+Link: https://github.com/lovrindan/mmsproject
