@@ -194,6 +194,7 @@ public class Breakout implements GameInterface {
         boolean collisionDetected(Vector2D dist){  return dist.lengthSquared()<radius*radius;}
 
         private void deflect(Vector2D deflectVec) {
+            //Deflects the Ball direction. see Documentation
             if(Vector2D.isAngleAcute(deflectVec,dir)) return;
             Vector2D proj = deflectVec.project(dir);
             Vector2D proj2 = proj.scalarMult(2);
