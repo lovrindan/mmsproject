@@ -140,6 +140,9 @@ public class Tetris implements GameInterface {
         draw();
     }
     private boolean collidesAt(int posx, int posy){
+        if(posx == height -1){
+            return true;
+        }
         for(int i = posx; i < pieces[currentPiece].length -1; i++){
             for(int j = posy; j < pieces[currentPiece][i].length; j++){
                 if(field[i][j].aChar == 'O'){
